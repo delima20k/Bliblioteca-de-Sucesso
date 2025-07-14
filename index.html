@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca de Sucesso</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --azul-escuro: #1d3557;
+      --amarelo-destaque: #f4a261;
+      --cinza-claro: #f1faee;
+      --texto-escuro: #2d3142;
+      --branco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--cinza-claro);
+      color: var(--texto-escuro);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      font-weight: 800;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 12px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: var(--amarelo-destaque);
+      color: var(--texto-escuro);
+      padding: 14px 25px;
+      margin: 15px auto;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1em;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+      width: 300px;
+    }
+
+    .btn:hover {
+      background-color: #e17b3d;
+    }
+    .zap{
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn-fixo-whats {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    #pdfDownload, #btnCompraVideo {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .copy-section {
+      background-color: var(--branco);
+      padding: 40px;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .copy-section h2 {
+      color: var(--azul-escuro);
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 25px;
+    }
+
+    .copy-section p {
+      font-size: 1.1em;
+      margin-bottom: 18px;
+    }
+
+    .demonstracao {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .demonstracao img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+     .img1 {
+      width: 40em;
+      max-width: 45em;
+      border-radius: 10px;
+      
+      
+    }
+     .price-section {
+      text-align: center;
+      margin: 30px 0;
+    }
+     .price {
+      font-size: 2em;
+      color: #e63946;
+      font-weight: bold;
+    }
+
+     .countdown {
+      font-size: 1.2em;
+      color: #444;
+    }
+    .timer{
+        font-weight: 800;
+        font-size: 4rem;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+     .old-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+    .cortesia{
+       padding: 1em 2em;
+       background-image: url("img/livro-cortesia.webp");
+       background-repeat: no-repeat;
+       width: 25em;
+       height: 35em;
+       margin-left: 150px;
+    }
+    .conj{
+        padding: 1em;
+        display: flex;
+        gap: 2em;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -20em;
+    }
+
+    .btn-dow{
+        width:13rem;
+        height: 3rem;
+    }
+    .highlight li{
+      list-style: none;
+      padding: 1rem;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      
+     } 
+   
+
+    footer {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .btn {
+        width: 90%;
+        padding: 15px;
+        font-size: 1em;
+      }
+      .img1{
+        width: 23em;
+      }
+
+      .demonstracao {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Biblioteca de Sucesso</h1>
+    <p>Acesse agora +500 livros digitais para transformar sua vida pessoal e financeira.</p>
+  </header>
+
+  <main>
+    <video id="vslVideo" controls>
+      <source src="img/Design sem nome.mp4" type="video/mp4">
+      Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    
+    
+       <div class="conj">
+          <img class="img1" src="img/df4968a8f316bce42597d9c11bf3c05c.png" alt="">
+          <img src="https://i0.wp.com/fmpsc.edu.br/wp-content/uploads/2018/07/Seta-Gif.gif?ssl=1" alt="">
+          <div class="cortesia">
+             <a  href="Greg-McKeown-Essencialismo-Sextante-_2015_.pdf" download><img class="btn-dow" src="img/download-button01.png" alt="cortesia"></a>
+          </div>
+       </div>
+
+
+    <div id="btnCompraVideo">
+      <a class="btn" href="#compra">🛒 Comprar Biblioteca de Sucesso</a>
+    </div>
+
+    <section class="copy-section">
+      <h2>📚 Sua Jornada Começa Aqui</h2>
+      <div class="price-section">
+      <div class="old-price">De R$97,00</div>
+      <div class="price">Por R$19,90</div>
+    </div>
+      <p>Você sente que está se esforçando, tentando aprender mais, melhorar suas finanças, desenvolver sua carreira — mas os resultados não aparecem?</p>
+      <p>O problema não é você. O problema é o acesso ao conhecimento certo. E é por isso que criamos a <strong>Biblioteca de Sucesso</strong>.</p>
+      <p>São mais de <strong>500 livros digitais</strong> que abordam temas essenciais como <strong>finanças pessoais</strong>, <strong>investimentos</strong>, <strong>negócios online</strong>, <strong>mentalidade de sucesso</strong>, <strong>persuasão</strong>, <strong>vendas</strong> e <strong>marketing digital</strong>.</p>
+      <div style="text-align:center; margin-top: 20px;">
+         <div class="highlight">
+      <h2>🎁 Bônus incríveis</h2>
+      <ul>
+        <li>+600 livros já em EPUB otimizados para Kindle</li>
+        <li>+150 audiobooks para ouvir onde quiser</li>
+      </ul>
+    </div>
+        <a class="btn" href="https://seulinkdecompra.com">💡 Liberar Acesso Agora</a>
+      </div>
+      <br>
+      <p>Transforme seu tempo de leitura em crescimento real. Essa é a chance de sair da estagnação e assumir o controle do seu desenvolvimento.</p>
+      <p><strong>Não espere mais.</strong> Liberte o potencial que há dentro de você com a Biblioteca de Sucesso!</p>
+    </section>
+
+    <div class="demonstracao">
+      <img src="img/87681007df542fcd62b030afe6dd0b41.png" alt="Livro 1">
+      <img src="img/MAIS-ESPERTO-QUE-O-DIABO.png" alt="Livro 2">
+      <img src="img/as48LeisDoPoder3D.webp" alt="Livro 3">
+      <img src="img/eb24ab73bcbaeef941f9a8d6a201820a.png" alt="Livro 4">
+    </div>
+    <div class="price-section">
+   <div class="old-price">De R$97,00</div>
+     <div class="price">Por R$19,90</div>
+     <div class="countdown timer">Oferta termina em: <span class="timer" id="timer">01:00:00</span></div>
+   </div>
+
+    <div class="cta" id="compra">
+      <a class="btn" href="https://seulinkdecompra.com">✅ Quero Acessar Agora</a>
+    </div>
+  </main>
+
+  <a href="https://wa.me/11941936680" class="btn-fixo-whats" target="_blank"><img class="zap" src="img/e7f69b4775c10925f0d5eda07c6c53f9.png" alt=""></a>
+
+  <footer>
+    <p>🔒 Garantia de Satisfação de 7 dias | Loja Oficial: Biblioteca de Sucesso</p>
+  </footer>
+
+  <script>
+     let time = 600;
+  const timer = document.getElementById("timer");
+  function updateTimer() {
+    const hr = String(Math.floor(time / 3600)).padStart(2, '0');
+    const min = String(Math.floor((time % 3600) / 60)).padStart(2, '0');
+    const sec = String(time % 60).padStart(2, '0');
+    timer.textContent = `${hr}:${min}:${sec}`;
+    if (time > 0) {
+      time--;
+      setTimeout(updateTimer, 1000);
+    } else {
+      timer.textContent = "Expirado";
+    }
+  }
+  updateTimer();
+
+  </script>
+</body>
+</html>
